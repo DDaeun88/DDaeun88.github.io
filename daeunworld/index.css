@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Grenze+Gotisch:wght@900&family=Jua&display=swap');
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color1: #d49466;
+    --highlight-color: gray;
+
+    --font-size: 1rem;
+    --bar-elements-font-size: 2.4rem;
+    --var_logo-font-size: 3rem;
+    --main_wallpaper-text2-font-size: 4rem;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* navbar */
+.navbar {
+    /* 아이템 한 줄에 보여주기 */
+    display: flex; 
+    /* 사이사이에 공간 */
+    justify-content: space-between; 
+    /* 수직 중간 */
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 2px 8px 2px 12px;
+}
+
+.navbar_logo {
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: var(--var_logo-font-size);
+}
+.navbar_logo a{
+    color: var(--accent-color1);
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.navbar_menu li {
+    padding: 8px 8px 12px 8px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 1.6rem;
+}
+.navbar_menu li:hover {
+    background-color: var(--highlight-color);
+    border-radius: 5px;
+}
+
+.navbar_icons {
+    list-style: none;
+    color: var(--text-color);
+    display: flex;
+    padding-left: 0;
+    margin:0;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+.navbar_toogleBtn {
+    position: absolute;
+    right: 32px;
+    padding-top: 14px;
+    display: none;
+    color: var(--accent-color1);
+}
+
+/* 사이트별 세부 내용 */
+#contents {
+    margin: 2px 20px 2px 20px
+}
+
+header h1 {
+    font-size: 6rem;
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    margin-bottom: 3px;
+}
+header h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+footer {
+    margin: 0 2rem 3rem 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+    }
+
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_icons {
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar_toogleBtn {
+        position: absolute;
+        right: 32px;
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+}
