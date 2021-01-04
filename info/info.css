@@ -5,7 +5,7 @@
     --text-color: #f0f4f5;
     --accent-color1:  #f0f4f5;
     --highlight-color: gray;
-    --background-color: #433520;
+    --background-color: #151f21;
 
     --font-size: 2rem;
     --subject-font-size: 3rem;
@@ -15,9 +15,6 @@
 }
 
 * {
-    /* background-image: url('john-fowler-d2YMQ-hZ3og-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%; */
     background-color: var(--background-color);
     font-size: var(--font-size);
     color: var(--text-color);
@@ -76,6 +73,7 @@ a:visited {text-decoration: none;}
     color: var(--accent-color1);
     background: unset;
     padding: 0 0.6rem 0 0.6rem;
+    display: inline-block;
 }
 
 
@@ -212,7 +210,7 @@ footer {
 }
 
 /* Laptop L */
-@media screen and (min-width: 1200px) and (max-width:1500px) {
+@media screen and (min-width: 1200px) and (max-width:2500px) {
     :root {
         --font-size: 1.1rem;
         --subject-font-size: 3rem;
@@ -229,7 +227,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 1500px) and (max-width:10000000px) {
+@media screen and (min-width: 2500px) and (max-width:10000000px) {
     :root {
         --font-size: 1.5rem;
         --subject-font-size: 5rem;
